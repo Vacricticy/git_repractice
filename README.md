@@ -14,7 +14,7 @@
 
 8.设置本地仓库的签名（email）：git config --global user.email "xxx@xx.com"
 
-查看本地仓库的信息：git config --local -l
+- 查看本地仓库的信息：git config --local -l
 
 9.向 Git 提交内容：git commit -m “xx” （xx 为对提交的内容进行描述）
 
@@ -36,9 +36,9 @@
 
 18.设置本地分支追踪远程分支：git push --set-upstream
 
-推送本地分支到远程
-git push -u origin master
-git push
+- 推送本地分支到远程
+  - git push -u origin master
+  - git push
 
 19.克隆仓库：git clone xxx [rename]（xxx 为远程地址,rename 为重命名的本地仓库文件名）
 
