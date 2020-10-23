@@ -36,6 +36,10 @@
 
 18.设置本地分支追踪远程分支：git push --set-upstream
 
+推送本地分支到远程
+git push -u origin master
+git push
+
 19.克隆仓库：git clone xxx [rename]（xxx 为远程地址,rename 为重命名的本地仓库文件名）
 
 20.拉取远程仓库最新的数据：git pull
