@@ -19,7 +19,7 @@
 10.让 Git 不提交某些文件/忽略某些文件：创建文件 .gitignore 并在文件中添加文件名/文件夹名 即可 （若 git 已经开始追踪某些文件 则需要 11）
 
 11.让 Git 不再追踪某个/某些文件：git rm --cached xx （xx 为文件名）
-
+ 
 12.Git 添加分支：git branch xx （xx 为分支名）
 
 13.Git 切换分支：git checkout xx （xx 为分支名）
