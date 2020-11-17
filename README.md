@@ -197,6 +197,20 @@ git log --graph --decorate --oneline
 
 
 
+## git checkout 
+
+查看之前的版本
+
+```
+git checkout 15ec57f 
+```
+
+检出文件：
+
+```
+
+```
+
 
 
 
