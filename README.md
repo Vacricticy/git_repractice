@@ -67,7 +67,7 @@
 
 
 
-利用config设置单个仓库以及用户的配置：
+## git config   设置单个仓库或用户的配置：
 
 ```shell
 # 告诉Git你是谁
@@ -92,6 +92,108 @@ git config --global alias.up rebase
 
 git config --global alias.ci commit
 ```
+
+
+
+
+
+## git status    查看仓库的状态：
+
+```shell
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+#表示该文件已经添加到缓存中，等待commit提交
+Changes to be committed:    
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index2.txt
+
+#表示该文件还未被添加到缓存
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+        modified:   index2.txt
+
+#表示该文件时新建的，还没有被跟踪。此时直接通过git add 可以将该文件进行跟踪，并添加到缓存中。所以执行git add xxx后该文件的状态会变为 changes to be committed
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index3.txt
+```
+
+
+
+
+
+## git log    查看仓库的状态
+
+
+
+```
+git log
+```
+
+使用默认格式显示完整地项目历史。如果输出超过一屏，你可以用 `空格键` 来滚动，按 `q` 退出。
+
+```
+git log -n <limit>
+```
+
+用 `<limit>` 限制提交的数量。比如 `git log -n 3` 只会显示 3 个提交。
+
+```
+git log --oneline
+```
+
+将每个提交压缩到一行。当你需要查看项目历史的上层情况时这会很有用。
+
+```
+git log --stat
+```
+
+除了 `git log` 信息之外，包含哪些文件被更改了，以及每个文件相对的增删行数。
+
+```
+git log -p
+```
+
+显示代表每个提交的一堆信息。显示每个提交全部的差异（diff），这也是项目历史中最详细的视图。
+
+```
+git log --author="<pattern>"
+```
+
+搜索特定作者的提交。`<pattern>` 可以是字符串或正则表达式。
+
+```
+git log --grep="<pattern>"
+```
+
+搜索提交信息匹配特定 `<pattern>` 的提交。`<pattern>` 可以是字符串或正则表达式。
+
+```
+git log <since>..<until>
+```
+
+只显示发生在 `<since>` 和 `<until>` 之间的提交。两个参数可以是提交 ID、分支名、`HEAD` 或是任何一种引用。
+
+```
+git log <file>
+```
+
+只显示包含特定文件的提交。查找特定文件的历史这样做会很方便。
+
+```
+git log --graph --decorate --oneline
+```
+
+还有一些有用的选项。`--graph` 标记会绘制一幅字符组成的图形，左边是提交，右边是提交信息。`--decorate` 标记会加上提交所在的分支名称和标签。`--oneline` 标记将提交信息显示在同一行，一目了然。
+
+
 
 
 
