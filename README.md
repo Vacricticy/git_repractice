@@ -208,7 +208,9 @@ git checkout 15ec57f #不会更改项目当前的状态
 检出文件：查看以前版本中的某个文件
 
 ```shell
-git checkout 15ec57f README.md  #会更改项目当前的状态，比如此时README.md的状态为Changes not staged for commit待添加缓存
+git checkout 15ec57f README.md  #此时所在的分支仍然是master，且当前项目的状态会发生改变，比如此时README.md的状态为Changes not staged for commit 
+
+git checkout HEAD README.md #可以通过该命令检出最新的版本
 ```
 
 
