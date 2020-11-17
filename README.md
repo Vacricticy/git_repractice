@@ -201,14 +201,14 @@ git log --graph --decorate --oneline
 
 查看之前的版本
 
-```
-git checkout 15ec57f 
-```
-
-检出文件：
-
+```shell
+git checkout 15ec57f #不会更改项目当前的状态
 ```
 
+检出文件：查看以前版本中的某个文件
+
+```shell
+git checkout 15ec57f README.md  #会更改项目当前的状态，比如此时README.md的状态为Changes not staged for commit待添加缓存
 ```
 
 
